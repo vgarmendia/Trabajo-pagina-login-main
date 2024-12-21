@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../includes/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="../includes/jquery.js"></script>
+    <title>Main</title>
+</head>
+
+<body>
+    <div class="container-fluid p-0 d-flex flex-row bg-body-tertiary">
+        <nav class="sidebar vh-100 d-flex flex-column p-3">
+            <div class="text-center mb-2 d-flex justify-content-between align-items-center px-2">
+                <img src="../imagenes/Logo_TDI_Chico.png" alt="Logo" class="logo img-fluid">
+                <i class="bi bi-x-lg d-md-none text-white mx-3" id="sidebarClose"></i>
+            </div>
+            <ul class="nav flex-column separator py-4">
+                <li class="nav-item mb-3 sidebar-item">
+                    <a href="#" class="nav-link d-flex align-items-center text-decoration-none text-white">
+                        <img src="../imagenes/svg/Darth_Vader.svg" alt="icono usuario" class="me-2" width="24" height="24">
+                        Alta usuarios
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-panel w-100 gap-3">
+            <nav class="navbar navbar-expand-lg bg-white justify-content-end p-3 px-2 shadow-sm">
+                <div class="nav-main container-fluid align-items-center">
+                    <button class="d-md-none btn btn-primary" id="sidebarToggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="me-5 d-none d-md-block">
+                        <i class="bi bi-search text-primary fs-5"></i>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../imgenes/usuario.png" alt="User" class="rounded-circle me-2" width="40">
+                            <div class="user-info me-3 d-none d-md-block">
+                                <p class="mb-0 fw-bold username"><Valentino Garmendia></p>
+                                <p class="mb-0 text-muted role">Developer JR</p>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración</a></li>
+                            <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content bg-white m-3 p-3 rounded shadow-sm">
+                <h1 class="title">Formulario de registro de usuarios</h1>
+                <div class="tabs">
+                    <ul class="nav nav-pills mb-3 gap-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-alta-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-alta" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Alta</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-lista-de-usuarios-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-lista-de-usuarios" type="button" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">Lista de Usuarios</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-informacion-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-informacion" type="button" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Información</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-alta" role="tabpanel"
+                            aria-labelledby="pills-alta-tab" tabindex="0">
+                            <div class="p-2 row">
+                                <div class="alta-form col-md-7 content-left">
+                                    <form action="" method="">
+                                        <div class="mb-3">
+                                            <label for="usuario" class="form-label">Usuario</label>
+                                            <input type="text" class="form-control" id="usuario" name="usuario"
+                                                placeholder="Ingrese su nombre de usuario" required>
+                                            <p class="aclaracion">Debe contener números y letras minúsculas y mayúsculas
+                                            </p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="correo" class="form-label">Correo</label>
+                                            <input type="email" class="form-control" id="correo" name="correo"
+                                                placeholder="Ingrese su correo" required>
+                                            <p class="aclaracion">example@example.com</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="clave" class="form-label">Clave</label>
+                                            <input type="password" class="form-control" id="clave" name="clave"
+                                                placeholder="Ingrese su clave" required>
+                                            <p class="aclaracion">Mínimo 5 caracteres alfanumericos, debe contener
+                                                mayúsculas y minúsculas</p>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+                                    </form>
+                                </div>
+                                <div
+                                    class="col-md-5 content-right d-none d-md-flex justify-content-center align-items-center">
+                                    <img src="../imagenes/Darth_Vader.png" alt="User" class="img-fluid user-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-lista-de-usuarios" role="tabpanel"
+                            aria-labelledby="pills-lista-de-usuarios-tab" tabindex="0">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Correo</th>
+                                            <th scope="col">Fecha de registración</th>
+                                            <th scope="col">Foto</th>
+                                            <th scope="col">Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>valentino</td>
+                                            <td>valen@example.com</td>
+                                            <td>2020 20:54</td>
+                                            <td><img src="../imagenes/usuario.png" alt="Foto de perfil" width="60">
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-around align-items-center h-100">
+                                                    <i class="bi bi-person-plus user-action p-2 rounded"></i>
+                                                    <i class=" bi bi-trash user-action p-2 rounded"></i>
+                                                    <i class="bi bi-pencil-square user-action p-2 rounded"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Tobias</td>
+                                            <td>Tobias@example.com</td>
+                                            <td>2015 06:45</td>
+                                            <td><img src="../imagenes/usuario.png" alt="Foto de perfil" width="60">
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-around align-items-center h-100">
+                                                    <i class="bi bi-person-plus user-action p-2 rounded"></i>
+                                                    <i class=" bi bi-trash user-action p-2 rounded"></i>
+                                                    <i class="bi bi-pencil-square user-action p-2 rounded"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Evelin</td>
+                                            <td>Evelin@example.com</td>
+                                            <td>2017 20:50</td>
+                                            <td><img src="../imagenes/usuario.png" alt="Foto de perfil" width="60">
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-around align-items-center h-100">
+                                                    <i class="bi bi-person-plus user-action p-2 rounded"></i>
+                                                    <i class=" bi bi-trash user-action p-2 rounded"></i>
+                                                    <i class="bi bi-pencil-square user-action p-2 rounded"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Fernando</td>
+                                            <td>Fernando@example.com</td>
+                                            <td>2010 09:20</td>
+                                            <td><img src="../img/profile.png" alt="Foto de perfil" width="60">
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-around align-items-center h-100">
+                                                    <i class="bi bi-person-plus user-action p-2 rounded"></i>
+                                                    <i class=" bi bi-trash user-action p-2 rounded"></i>
+                                                    <i class="bi bi-pencil-square user-action p-2 rounded"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Diego</td>
+                                            <td>Diego@example.com</td>
+                                            <td>2022 05:10</td>
+                                            <td><img src="../imagenes/usuario.png" alt="Foto de perfil" width="60">
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-around align-items-center h-100">
+                                                    <i class="bi bi-person-plus user-action p-2 rounded"></i>
+                                                    <i class=" bi bi-trash user-action p-2 rounded"></i>
+                                                    <i class="bi bi-pencil-square user-action p-2 rounded"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-informacion" role="tabpanel"
+                            aria-labelledby="pills-informacion-tab" tabindex="0">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Nota
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body row">
+                                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                                <img src="../imagenes/batman.webp" alt="Noticia 1" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="titulo-noticia">Nota </h3>
+                                                <p>
+                                                    Batman es un vigilante enmascarado que 
+                                                    opera en Gotham City, combatiendo el 
+                                                    crimen con su inteligencia, habilidades 
+                                                    físicas y una vasta tecnología. 
+                                                    A pesar de no tener superpoderes, 
+                                                    utiliza su entrenamiento en artes 
+                                                    marciales y tácticas de detective para 
+                                                    enfrentar a sus enemigos. 
+                                                    Su identidad secreta es Bruce Wayne, un 
+                                                    millonario que sufrió la pérdida de sus 
+                                                    padres a manos de un ladrón, lo que lo 
+                                                    impulsó a convertirse en el 
+                                                    Caballero Oscuro. Batman es conocido por 
+                                                    su moral inquebrantable, su lucha
+                                                    constante contra la corrupción y su 
+                                                    simbolismo como un símbolo de esperanza y 
+                                                    justicia.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.querySelector('.sidebar').classList.toggle('show');
+        });
+        document.getElementById('sidebarClose').addEventListener('click', function () {
+            document.querySelector('.sidebar').classList.remove('show');
+        });
+    </script>
+    <script src="../includes/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
