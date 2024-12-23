@@ -1,4 +1,4 @@
-.columna {
+.sidebar {
 	background-color: #11192a;
 	width: 300px;
 	position: fixed;
@@ -9,107 +9,229 @@
 	z-index: 1000;
 }
 
-.ocultar {
-    left: 0 !important;
+.show {
+	left: 0 !important;
 }
 
 .logo {
-    width: 100px;
-    object-fit: cover;
+	width:210px;
+	object-fit: cover;
+}
+
+img .logo{
+	display: flex;
+	justify-content: center;
 }
 
 .separator {
-    margin-top: 1rem;
-    border-top: 1px solid #6c757d;
-    padding-top: 10px;
+	margin-top: 1rem;
+	border-top: 1px solid #646464;
+	padding-top: 10px;
 }
 
-.logo_columna_izquierda {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: all 0.3s ease-in-out;
+.sidebar-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: all 0.3s ease;
 }
 
-.logo_columna_izquierda:hover {
-    transform: scale(1.1);
+.p-2{
+	display: flex;
+	align-items: center;
 }
 
-.main_panel {
-    margin-left: 0;
-    background-color: beige;
-    min-height: 100vh;
-}
-
-#columnatoggle {
-    display: block;
-}
-
-.nombre_usuario {
-    color:black;
-    font-size: 1.5rem;
-}
-
-.rol {
-    color:#11192a;
-    font-size: 1rem;
-}
-
-.titulo {
-    color: #11192a;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.imagen_usuario {
-    max-width: 300px;
-}
-
-.tabs {
-    margin-top: 1rem;
-    border-top: 1px solid #6c757d;
-    padding-top: 10px;
-}
-
-.nota {
-    color: #11192a;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.accion_usuario:hover {
-    background-color: #007bff; /* Azul estándar */
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.titulo{
-    margin-top: 1.5rem;
+.navbar{
+	position:sticky;
+	top:0px;
+	right:0;
+	z-index: 100;
 }
 
 .nav-main{
-    display: flex;
-    justify-content: space-between;
+	background-color: #f2f1f1;
 }
 
-@media (min-with: 992px)
-{
-    .columna {
-        position: fixed;
-        left: 0;
-    }
+.sidebar-item:hover {
+	transform: scale(1.03);
+}
 
-    .main_panel {
-        margin-left: 300px;
-    }
+.main-panel {
+	background-color: #f5f5f5;
+	min-height: 100vh;
+	margin-left: 0;
+}
 
-    .nav-main {
-        justify-content: flex-end!important;
-        padding-right: 2rem;
-    }
+#sidebarToggle {
+	display: block;
+}
 
-    .titulo-noticia{
-        margin-top: 0;
-    }
+.nav-main{
+	display: flex;
+	align-items: center;
+
+}
+
+.rounded-circle{
+	padding: 0 20px;
+}
+
+.dropdown{
+	display: flex;
+	align-items: center;
+}
+
+.username {
+	color: #11192a;
+	font-size: 1.1rem;
+}
+
+.role {
+	color: #646464;
+	font-size: 1rem;
+}
+
+.title {
+	color: #11192a;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.user-image {
+	max-width: 300px;
+	transition: transform 0.3s;
+}
+
+.user-image:hover {
+	cursor: pointer;
+	transform: scale(1.03);
+}
+
+.tabs {
+	margin-top: 1rem;
+	border-top: 1px solid #e7e7e7;
+	padding-top: 10px;
+}
+
+th{
+    text-align: start;
+}
+
+.table{
+    width: 100%;
+}
+
+.imagenBruno{
+    width: 100%;
+    display: flex;
+}
+
+.img-fluid{
+    float: left;
+}
+
+.imagenBruno img{
+    width: 500px;
+}
+
+.text-container-brunoDiaz{
+    margin:0 30px;
+    font-size: 20px;
+}
+
+.aclaracion {
+	color: #646464;
+	font-size: 0.8rem;
+	margin-top: 0.5rem;
+}
+
+.user-action {
+	transition: background-color 0.3s;
+}
+
+.user-action:hover {
+	background-color: rgb(143, 218, 231);
+	cursor: pointer;
+}
+
+.titulo-noticia {
+	margin-top: 1rem;
+}
+
+.nav-main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.valid {
+	border-color: #28a745 !important;
+}
+
+.invalid {
+	border-color: #dc3545 !important;
+}
+
+.select-image {
+	transition: all 0.3s;
+}
+
+.select-image:hover {
+	cursor: pointer;
+}
+
+.selected-image {
+	border: 3px solid rgb(24, 207, 0);
+	transform: scale(1.2);
+}
+
+.p-2{
+    display: flex;
+    justify-content: space-around;
+}
+
+#pills-tab{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item{
+    padding: 20px;
+}
+
+#pills-alta-tab, #pills-informacion-tab, #pills-lista-de-usuarios-tab{
+    background-color: #0e5ea9;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 20px;
+    color:#fff;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+
+#pills-alta-tab:hover, #pills-informacion-tab:hover, #pills-lista-de-usuarios-tab:hover{
+    background-color: #10347b;
+}
+
+
+
+
+@media (min-width: 992px) {
+	.sidebar {
+		position: fixed;
+		left: 0;
+	}
+
+	.main-panel {
+		margin-left: 300px;
+	}
+
+	.nav-main {
+		justify-content: flex-end !important;
+		padding-right: 2rem;
+	}
+
+	.titulo-noticia {
+		margin-top: 0;
+	}
 }
