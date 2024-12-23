@@ -15,63 +15,46 @@
     <div class="container-fluid p-0 d-flex flex-row bg-body-tertiary">
         <nav class="sidebar vh-100 d-flex flex-column p-3">
             <div class="text-center mb-2 d-flex justify-content-between align-items-center px-2">
-                <img src="../imagenes/Logo_TDI_Chico.png" alt="Logo" class="logo img-fluid">
+                <img src="../imagenes/Logo_TDI_Chico-removebg-preview.png" alt="Logo" class="logo img-fluid">
                 <i class="bi bi-x-lg d-md-none text-white mx-3" id="sidebarClose"></i>
             </div>
-            <ul class="nav flex-column separator py-4">
-                <li class="nav-item mb-3 sidebar-item">
-                    <a href="#" class="nav-link d-flex align-items-center text-decoration-none text-white">
-                        <img src="../imagenes/svg/Darth_Vader.svg" alt="icono usuario" class="me-2" width="24" height="24">
-                        Alta usuarios
-                    </a>
-                </li>
-            </ul>
+            
         </nav>
         <div class="main-panel w-100 gap-3">
             <nav class="navbar navbar-expand-lg bg-white justify-content-end p-3 px-2 shadow-sm">
                 <div class="nav-main container-fluid align-items-center">
-                    <button class="d-md-none btn btn-primary" id="sidebarToggle">
-                        <i class="bi bi-list"></i>
-                    </button>
-                    <div class="me-5 d-none d-md-block">
-                        <i class="bi bi-search text-primary fs-5"></i>
-                    </div>
                     <div class="dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../imgenes/usuario.png" alt="User" class="rounded-circle me-2" width="40">
-                            <div class="user-info me-3 d-none d-md-block">
-                                <p class="mb-0 fw-bold username"><Valentino Garmendia></p>
-                                <p class="mb-0 text-muted role">Developer JR</p>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Configuración</a></li>
-                            <li><a class="dropdown-item" href="login.html">Cerrar sesión</a></li>
-                        </ul>
+                        <img src="../imagenes/usuario.png" alt="User" class="rounded-circle me-2" width="40">
+                        <div class="user-info me-3 d-none d-md-block">
+                            <p class="mb-0 fw-bold username"><Valentino Garmendia></p>
+                            <p class="mb-0 text-muted role"><b>Developer JR</b></p>
+                            <a href="login.html">Cerrar Seción</a>
+                        </div>
+
+
+                        
                     </div>
                 </div>
             </nav>
 
             <div class="content bg-white m-3 p-3 rounded shadow-sm">
-                <h1 class="title">Formulario de registro de usuarios</h1>
+                <h1 class="title" id="altaForm" >Formulario de registro de usuarios</h1>
                 <div class="tabs">
                     <ul class="nav nav-pills mb-3 gap-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-alta-tab" data-bs-toggle="pill"
+                            <a href="#altaForm" class="nav-link active" id="pills-alta-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-alta" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">Alta</button>
+                                aria-selected="true">Alta</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-lista-de-usuarios-tab" data-bs-toggle="pill"
+                            <a href="#table"class="nav-link" id="pills-lista-de-usuarios-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-lista-de-usuarios" type="button" role="tab"
-                                aria-controls="pills-profile" aria-selected="false">Lista de Usuarios</button>
+                                aria-controls="pills-profile" aria-selected="false">Lista de Usuarios</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-informacion-tab" data-bs-toggle="pill"
+                            <a href="#nota" class="nav-link" id="pills-informacion-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-informacion" type="button" role="tab"
-                                aria-controls="pills-contact" aria-selected="false">Información</button>
+                                aria-controls="pills-contact" aria-selected="false">Información</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -105,14 +88,14 @@
                                 </div>
                                 <div
                                     class="col-md-5 content-right d-none d-md-flex justify-content-center align-items-center">
-                                    <img src="../imagenes/Darth_Vader.png" alt="User" class="img-fluid user-image">
+                                    <img src="../imagenes/darth_vader-removebg-preview.png" alt="User" class="img-fluid user-image">
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-lista-de-usuarios" role="tabpanel"
                             aria-labelledby="pills-lista-de-usuarios-tab" tabindex="0">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -174,7 +157,7 @@
                                             <td>Fernando</td>
                                             <td>Fernando@example.com</td>
                                             <td>2010 09:20</td>
-                                            <td><img src="../img/profile.png" alt="Foto de perfil" width="60">
+                                            <td><img src="../imagenes/usuario.png" alt="Foto de perfil" width="60">
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-around align-items-center h-100">
@@ -207,45 +190,40 @@
                             aria-labelledby="pills-informacion-tab" tabindex="0">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            Nota
-                                        </button>
-                                    </h2>
+                                    <h2 id="nota">Nota</h2>
+                                    
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body row">
-                                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                                <img src="../imagenes/batman.webp" alt="Noticia 1" class="img-fluid">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h3 class="titulo-noticia">Nota </h3>
-                                                <p>
-                                                    Batman es un vigilante enmascarado que 
-                                                    opera en Gotham City, combatiendo el 
-                                                    crimen con su inteligencia, habilidades 
-                                                    físicas y una vasta tecnología. 
-                                                    A pesar de no tener superpoderes, 
-                                                    utiliza su entrenamiento en artes 
-                                                    marciales y tácticas de detective para 
-                                                    enfrentar a sus enemigos. 
-                                                    Su identidad secreta es Bruce Wayne, un 
-                                                    millonario que sufrió la pérdida de sus 
-                                                    padres a manos de un ladrón, lo que lo 
-                                                    impulsó a convertirse en el 
-                                                    Caballero Oscuro. Batman es conocido por 
-                                                    su moral inquebrantable, su lucha
-                                                    constante contra la corrupción y su 
-                                                    simbolismo como un símbolo de esperanza y 
-                                                    justicia.
-                                                </p>
+                                            <div class="imagenBruno">
+                                                <img src="../imagenes/batman.webp" alt="Noticia 1" class="img-fluid" id="brunoDiaz">
+                                                <div class="text-container-brunoDiaz">
+                                                    <p>
+                                                        Batman es un vigilante enmascarado que 
+                                                        opera en Gotham City, combatiendo el 
+                                                        crimen con su inteligencia, habilidades 
+                                                        físicas y una vasta tecnología. 
+                                                        A pesar de no tener superpoderes, 
+                                                        utiliza su entrenamiento en artes 
+                                                        marciales y tácticas de detective para 
+                                                        enfrentar a sus enemigos.</p>
+
+                                                        <p>Su identidad secreta es Bruce Wayne, un 
+                                                        millonario que sufrió la pérdida de sus 
+                                                        padres a manos de un ladrón, lo que lo 
+                                                        impulsó a convertirse en el 
+                                                        Caballero Oscuro. Batman es conocido por 
+                                                        su moral inquebrantable, su lucha
+                                                        constante contra la corrupción y su 
+                                                        simbolismo como un símbolo de esperanza y 
+                                                        justicia.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
